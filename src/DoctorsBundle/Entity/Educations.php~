@@ -1,0 +1,55 @@
+<?php
+
+namespace DoctorsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Educations
+ *
+ * @ORM\Table(name="educations")
+ * @ORM\Entity(repositoryClass="DoctorsBundle\Repository\EducationsRepository")
+ */
+class Educations
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typeOfSchool", type="string", nullable=true)
+     */
+    private $typeOfSchool;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="school", type="string", nullable=false)
+     */
+    private $school;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="DoctorsBundle\Entity\Doctors", inversedBy="education")
+     * @ORM\JoinColumn(name="doctor_id", referencedColumnName="id", nullable=false)
+     */
+    private $doctor;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    
+}

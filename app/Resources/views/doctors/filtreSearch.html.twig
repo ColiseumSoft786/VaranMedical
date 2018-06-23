@@ -1,0 +1,165 @@
+<div class="tg-filterarea">
+    <a class="tg-btnfilter" href="javascript:void(0);"><i class="fa fa-filter"></i></a>
+    <div id="tg-filtersection" class="tg-filtersection">
+        <a class="tg-btnfilter" href="javascript:void(0);"></a>
+        <form class="tg-themeform tg-formrefinesearch">
+             <h3>{{ 'Narrow Your Search'|trans }}</h3>
+            <fieldset>
+                <h4>{{ 'Appointment Type'|trans }}</h4>
+                <span class="tg-radio">
+                    <input type="radio" id="instant" name="appointment" value="instant" checked>
+                    label for="instant">{{ 'Instant Appointment'|trans }}</label>
+                </span>
+                <span class="tg-radio">
+                    <input type="radio" id="oncall" name="appointment" value="oncall">
+                    <label for="oncall">{{ 'On Call Appointment'|trans }}</label>
+                </span>
+            </fieldset>
+            <fieldset>
+                <h4>{{ 'Availability'|trans }}</h4>
+                <span class="tg-checkbox">
+                    <input type="checkbox" id="any" name="availability" value="Any" checked>
+                    <label for="any">{{ 'Any'|trans }}</label>
+                </span>
+                <span class="tg-checkbox">
+                    <input type="checkbox" id="monday" name="availability" value="Monday">
+                    <label for="monday">{{ 'Monday'|trans }}</label>
+                </span>
+                <span class="tg-checkbox">
+                    <input type="checkbox" id="tuesday" name="availability" value="Tuesday">
+                    <label for="tuesday">{{ 'Tuesday'|trans }}</label>
+                </span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="wednesday" name="availability" value="Wednesday">
+												<label for="wednesday">{{ 'Wednesday'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="thursday" name="availability" value="Thursday">
+												<label for="thursday">{{ 'Thursday'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="friday" name="availability" value="Friday">
+												<label for="friday">{{ 'Friday'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="saturday" name="availability" value="Saturday">
+												<label for="saturday">{{ 'Saturday'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="sunday" name="availability" value="Sunday">
+												<label for="sunday">{{ 'Sunday'|trans }}</label>
+											</span>
+                <div class="tg-uislider">
+                    <div id="tg-timerangeslider" class="tg-timerangeslider tg-themerangeslider">
+                        <div class="sliders_step1">
+                            <div id="slider-range"></div>
+                        </div>
+                    </div>
+                    <div class="tg-amountbox">
+                        <span>{{ 'Time Range'|trans }}: </span>
+                        <span class="tg-timeslider">9:00 AM</span> - <span class="tg-timeslider2">5:00 PM</span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h4>{{ 'Gender'|trans }}</h4>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="allgender" name="gender" value="all gender">
+												<label for="allgender">{{ 'All'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="male" name="gender" value="male">
+												<label for="male">{{ 'Male'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="female" name="gender" value="female">
+												<label for="female">{{ 'Female'|trans }}</label>
+											</span>
+            </fieldset>
+            <fieldset>
+                <h4>{{ 'Consultation Fee'|trans }}</h4>
+                <div id="tg-consultationfeerangeslider" class="tg-consultationfeerangeslider tg-themerangeslider"></div>
+                <div class="tg-amountbox">
+                    <span>{{ 'Fee Range'|trans }}: </span>
+                    <input type="text" id="tg-consultationfeeamount" readonly>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h4>{{ 'Rating'|trans }}</h4>
+                <div class="tg-ratingcheckbox">
+												<span class="tg-checkbox">
+													<input type="checkbox" id="allrating" name="ratingfilter" value="allrating" checked>
+													<label for="allrating">{{ 'all'|trans }}</label>
+												</span>
+                    <span class="tg-checkbox">
+													<input type="checkbox" id="onestar" name="ratingfilter" value="onestar">
+													<label for="onestar"><span class="tg-stars"><span></span></span></label>
+												</span>
+                    <span class="tg-checkbox">
+													<input type="checkbox" id="twostar" name="ratingfilter" value="twostar">
+													<label for="twostar"><span class="tg-stars"><span></span></span></label>
+												</span>
+                    <span class="tg-checkbox">
+													<input type="checkbox" id="threestar" name="ratingfilter" value="threestar">
+													<label for="threestar"><span class="tg-stars"><span></span></span></label>
+												</span>
+                    <span class="tg-checkbox">
+													<input type="checkbox" id="fourstar" name="ratingfilter" value="fourstar">
+													<label for="fourstar"><span class="tg-stars"><span></span></span></label>
+												</span>
+                    <span class="tg-checkbox">
+													<input type="checkbox" id="fivestar" name="ratingfilter" value="fivestar">
+													<label for="fivestar"><span class="tg-stars"><span></span></span></label>
+												</span>
+                </div>
+            </fieldset>
+            <fieldset>
+                 <h4>{{ 'Radius'|trans }}</h4>
+                <div id="tg-radiusrangeslider" class="tg-radiusrangeslider tg-themerangeslider"></div>
+                <div class="tg-amountbox">
+                    <span>{{ 'Distance in (Miles)'|trans }}: </span>
+                    <input type="text" id="tg-radiusamount" readonly>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h4>{{ 'Language'|trans }}</h4>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="alllanguages" name="languages" value="all languages" checked>
+												<label for="alllanguages">{{ 'all'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="chinese" name="languages" value="Chinese">
+												<label for="chinese">{{ 'Chinese'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="czech" name="languages" value="Czech">
+												<label for="czech">{{ 'Czech'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="arabic" name="languages" value="Arabic">
+												<label for="arabic">{{ 'Arabic'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="english" name="languages" value="English">
+												<label for="english">{{ 'English'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="french" name="languages" value="French">
+												<label for="french">{{ 'French'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="spanish" name="languages" value="Spanish">
+												<label for="spanish">{{ 'Spanish'|trans }}</label>
+											</span>
+                <span class="tg-checkbox">
+												<input type="checkbox" id="russian" name="languages" value="Russian">
+												<label for="russian">{{ 'Russian'|trans }}</label>
+											</span>
+            </fieldset>
+            <fieldset>
+                <button class="tg-btn" type="reset">{{ 'reset all'|trans }}</button>
+                <button class="tg-btn" type="submit">{{ 'apply filter'|trans }}</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
